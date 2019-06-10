@@ -1,0 +1,861 @@
+/*清除全部样式*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+body {
+    font-family: "Microsoft YaHei";
+    background: #f5f6f7;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+}
+input, textarea {
+    background:none;
+    outline: none;
+    border: none;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+}
+button {
+    outline: none;
+    border: none;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+.fl {
+    /*左浮动*/
+    float: left
+}
+.fr {
+    /*右浮动*/
+    float: right
+}
+.cf{
+    /*清除浮动*/
+    clear: both;
+}
+.tl {
+    /*左对齐*/
+    text-align: left;
+}
+.tc {
+    /*居中*/
+    text-align: center
+}
+.tr {
+    /*右对齐*/
+    text-align: right;
+}
+input,img{vertical-align:middle;}
+/*淡入动画开始*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+    /*结束状态 透明度为1*/
+}
+@-webkit-keyframes fade-in { /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*淡入动画结束*/
+
+.BaseHomeTop {
+    /*最顶部导航栏*/
+    width: 100%;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.BaseHomeTop li {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.BaseHomeTop li a {
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.BaseHomeSearch {
+    width: 100%;
+    height: 60px;
+    padding: 20px 200px;
+    font-size:0px;
+}
+
+.BaseHomeSearch li {
+    display: inline-block;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.BaseHomeSearch li img {
+    height: 60px;
+    vertical-align: middle;
+}
+
+.BaseHomeSearchBody {
+    /*搜索框主框架*/
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.BaseHomeSearchBody input {
+    border: 1px solid #ccc;
+    font-size: 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 60%;
+    padding: 3px 20px;
+    background: #fff;
+}
+
+.BaseHomeSearchBody button {
+    display: inline-block;
+    width: 20%;
+    background: #000000;
+    color: #fff;
+    font-size: 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 20px;
+}
+
+.BaseHomeSearchCar {
+    /*购物车*/
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.BaseHomeSearchCar img {
+    height: 40px !important;
+}
+
+.BaseHomeSearchCar span {
+    color: red;
+}
+
+.BaseMain {
+    /*基础主体*/
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 200px;
+}
+
+.BaseMainBanner {
+    width: 100%;
+    font-size:0px;
+    vertical-align: top;
+}
+
+.BaseMainBannerLeft {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+.BaseMainBannerRight {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}
+
+.BaseMainBannerRight #home_base_home_topBanner {
+    width: 100%;
+    height: 350px;
+}
+
+.BaseMainBannerRight #home_base_home_topBanner img {
+    width: 100%;
+    height: 350px;
+    transition: all 0.6s;
+}
+
+.BaseMainBannerRight #home_base_home_topBanner img:hover {
+    /*图片选中放大*/
+    transform: scale(1.1);
+}
+
+.BaseMainBannerRightMenuTop {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color: #000;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 50px;
+}
+
+.BaseMainBannerRightMenuTop li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.BaseMainBannerRightMenuTop li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.BaseMainBannerRightMenuBody {
+    width: 100%;
+    background: #fff;
+    font-size: 20px;
+    color: #000;
+    height: 510.4px;
+    display: none;
+}
+
+.BaseMainBannerRightMenuBodyTop {
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.BaseMainBannerRightMenuBodyTopLine {
+    background: #f5f5f5;
+    height: 1px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.BaseMainBannerRightMenuBodyMain {
+    padding: 20px 30px;
+}
+
+.BaseMainBannerRightMenuBodyMainBottom {
+    margin-right: 10px;
+}
+
+.BaseMainBannerRightMenuBodyMainBottom a {
+    display: inline-block;
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.BaseMainBannerRightMenuBodyMainItem {
+    margin-top: 20px;
+}
+
+.BaseMainBannerLeftMenuTop {
+    width: 100%;
+    background: url("../image/classified.png") no-repeat;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.BaseMainBannerLeftMenuBody {
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.BaseMainBannerLeftMenuBodyItem {
+    font-size: 15px;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-left: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    line-height: 23px;
+}
+
+.BaseMainBannerLeftMenuBodyItem:hover {
+    border-right: none;
+    -moz-box-shadow: 0px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 0px 5px 5px #ccc;
+}
+
+.BaseMainBannerLeftMenuBodyItem a {
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 13px;
+}
+
+.BaseMainBannerRightAD {
+    width: 100%;
+    height: 150.4px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.BaseMainBannerRightADItem {
+    font-size: 0px;
+    display: inline-block;
+    width: 33.33%;
+    height: 150.4px;
+    padding-left: 10px;
+}
+
+.BaseMainBannerRightADItem img {
+    width: 100%;
+    height: 150.4px;
+}
+
+.BaseMainHome {
+    margin-top: 30px;
+    width: 100%;
+    display: none;
+    background: #fff;
+    -moz-box-shadow: 5px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.BaseHomeLoginBg {
+    /*登录框*/
+    width: 40%;
+    z-index: 2;
+    position: absolute;
+    display: inline-block;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translatex(-50%);
+    animation: fade-in; /*动画名称*/
+    animation-duration: 1s; /*动画持续时间*/
+    -webkit-animation: fade-in 1s; /*针对webkit内核*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    z-index: 999999;
+    display: none;
+}
+
+.BaseHomeLoginBg input {
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.BaseHomeLoginBg button {
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 60%;
+    border-radius: 5px;
+    padding: 10px 0px;
+    transition: all 0.6s;
+}
+
+.BaseHomeLoginBg button:hover {
+    width: 100%;
+}
+
+.BaseHomeLoginBgTop {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 30px;
+}
+
+.sigma-content{
+    text-align: center;
+    background-color: #fff;
+}
+.sigma-middle-line:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #2c2c2c;/*颜色需与主题大背景色一致*/
+    position: relative;
+    top: 10px;/*调节线高*/
+    left: 0;
+}
+.sigma-line-text{
+    display: inline-block;
+    background: #fff;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.BaseHomeOverlay {
+    /*透明蒙板*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
+}
+
+.AdminTopBar {
+    /*管理员顶部导航栏*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 30px;
+    background: #fff;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.AdminTopBar:hover {
+    background: #000;
+    color: #fff;
+}
+
+.AdminMain {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 200px;
+}
+
+.AdminMainItem {
+    width: 100%;
+    background: #fff;
+    -moz-box-shadow: 5px 5px 5px #ccc; /* 老的 Firefox */
+    box-shadow: 5px 5px 5px #ccc;
+    display: none;
+    padding: 30px;
+}
+
+.AdminTopBarAdd {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 20px;
+    font-weight: bold;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.AdminTopBarAdd:hover {
+    background: #000;
+    color: #fff;
+}
+
+.HomeSortTop {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.HomeBaseItemNo {
+    width: 100%;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.HomeBaseItem {
+    width: 20%;
+    overflow: hidden;
+    border: 1px solid #f5f5f5;
+    display: inline-block;
+    padding: 20px;
+}
+
+.HomeBaseItem img {
+    width: 100%;
+    height: 150px;
+    transition: all 0.6s;
+    overflow: hidden;
+}
+
+.HomeBaseItem img:hover {
+    transform: scale(1.08);
+}
+
+.HomeBaseItem h5 {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.HomeBaseItemBrand {
+    font-weight: bold;
+}
+
+.HomeBaseDetail {
+    width: 100%;
+    padding: 10px 50px;
+}
+
+.HomeBaseDetailTop {
+    width: 100%;
+    display: block;
+}
+
+.HomeBaseDetailTopImg {
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.HomeBaseDetailTopInfo {
+    width: 60%;
+    display: inline-block;
+}
+
+.HomeBaseDetailTopInfo h1 {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #000;
+    font-weight: bold;
+}
+
+.HomeBaseDetailTopInfoBrand {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.HomeBaseDetailTopInfo h2 {
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.6s;
+}
+
+.HomeBaseDetailTopInfo h2:hover {
+    transform: scale(1.1);
+}
+
+.HomeBaseDetailTopImg img {
+    height: 350px;
+    transition: all 0.6s;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.HomeBaseDetailTopImg img:hover {
+    transform: scale(1.1);
+}
+
+.HomeBaseDetailTopInfoNum {
+    /*数量选择*/
+    width: 100%;
+    vertical-align: middle;
+}
+
+.HomeBaseDetailTopInfoNum h3 {
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.HomeBaseDetailTopInfoNum input {
+    border: 1px solid #e6e6e6;
+    float: left;
+    padding: 5px 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.HomeBaseDetailTopInfo button {
+    transition: all 0.6s;
+}
+
+.HomeBaseDetailTopInfo button:hover {
+    border-radius: 20px;
+}
+
+.HomeBaseDetailMain {
+    padding: 20px 50px;
+}
+
+.HomeBaseCarBottom {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.HomeBaseCarBottom h3 {
+    color: red;
+    float: right;
+    padding: 10px 20px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.HomeBaseCarBottom button {
+    float: right;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.HomeBaseCarNo {
+    font-size: 30px;
+    padding: 20px;
+    width: 100%;
+    color: #2c2c2c;
+    text-align: center;
+}
+
+.HomeBaseCarMain {
+    border-top: 5px solid #e6e6e6;
+    width: 100%;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.HomeBaseCarMain input {
+    float: left;
+    margin-right: 20px;
+}
+
+.HomeBaseCarMain img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+.HomeBaseCarMain h3 {
+    float: left;
+    color: #2c2c2c;
+    height: 100px;
+    width: 300px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-right: 20px;
+}
+
+.HomeBaseCarMain h4 {
+    float: left;
+}
+
+.HomeBaseCarMainPrice {
+    color: red !important;
+    max-width: 100px !important;
+}
+
+.HomeBaseCarMainNum {
+    border: 1px solid #e6e6e6;
+    width: 50px !important;
+}
+
+.HomeBaseCarMainMustRight {
+    float: right !important;
+}
+
+.ClubTop {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    display: none;
+}
+
+.ClubTopEdit {
+    width: 100%;
+    height: 400px;
+}
+
+.ClubTop textarea {
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.ClubTopBtnTool {
+    padding: 10px;
+    text-align: right;
+}
+
+.ClubTopBtn {
+    transition: all 0.6s;
+}
+
+.ClubTopBtn:hover {
+    transform: scale(1.1);
+}
+
+.ClubList {
+    width: 100%;
+}
+
+.ClubItem {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 0px;
+    vertical-align: top;
+}
+
+.ClubInfo {
+    display: inline-block;
+    width: 20%;
+    border-right: 1px solid #ccc;
+    vertical-align: top;
+}
+
+.ClubInfo button {
+    margin-top: 10px;
+}
+
+.ClubInfo h3 {
+    font-weight: bold;
+}
+
+.ClubInfo h4 {
+    margin-top: 20px;
+}
+
+.ClubInfoDetail {
+    display: inline-block;
+    width: 50%;
+    border-right: 1px solid #ccc;
+    vertical-align: top;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 20px;
+}
+
+.ClubInfoRever {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.ClubInfoReverTop {
+    width: 100%;
+}
+
+.ClubInfoReverTop textarea {
+    font-size: 15px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.ClubInfoReverTop button {
+    float: right;
+    height: 30px;
+    font-size: 15px !important;
+    line-height: 15px !important;
+    border-radius: 0px !important;
+}
+
+.ClubInfoReverList {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.ClubInfoReverItem {
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.ClubInfoReverItem h6 {
+    margin-top: 10px;
+}
+
+.ClubInfoReverItem p {
+    font-size: 12px;
+    margin-top: 10px;
+}
